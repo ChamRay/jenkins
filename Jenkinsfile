@@ -35,7 +35,7 @@ pipeline {
             steps {
                 // sh 'mvn deploy'
                 echo "部署到服务器"
-                echo "printenv"
+                sh "printenv"
             }
         }
     }
