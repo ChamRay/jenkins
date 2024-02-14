@@ -1,1 +1,36 @@
 //写流水线的脚本
+
+
+pipeline {
+    //  全部的CICD流程都在这里定义
+
+    // 在集群模式下任何一个节点可用就可以执行
+    agent any
+    // 定义一些环境信息
+    environment {
+
+    }
+    // 定义流水线的加工流程
+    stages {
+        // 流水线的所有流程
+        stage('Build') {
+            // 定义流程中的步骤
+            steps {
+                sh 'mvn clean package'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                sh 'mvn test'
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                sh 'mvn deploy'
+            }
+        }
+    }
+
+}
