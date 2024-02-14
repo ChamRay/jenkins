@@ -19,7 +19,7 @@ pipeline {
             steps {
                 // sh 'mvn clean package'
                 echo "编译打包代码"
-                echo ${hello}
+                echo ”$hello“
             }
         }
 
@@ -27,7 +27,7 @@ pipeline {
             steps {
                 // sh 'mvn test'
                 echo "执行测试流程"
-                echo  ${world}
+                echo  “${world}”
             }
         }
 
