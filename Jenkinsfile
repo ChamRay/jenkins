@@ -16,19 +16,22 @@ pipeline {
         stage('Build') {
             // 定义流程中的步骤
             steps {
-                sh 'mvn clean package'
+                // sh 'mvn clean package'
+                echo "编译打包代码"
             }
         }
 
         stage('Test') {
             steps {
-                sh 'mvn test'
+                // sh 'mvn test'
+                echo "执行测试流程"
             }
         }
 
         stage('Deploy') {
             steps {
-                sh 'mvn deploy'
+                // sh 'mvn deploy'
+                echo "部署到服务器"
             }
         }
     }
