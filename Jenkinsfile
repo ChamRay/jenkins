@@ -7,7 +7,10 @@ pipeline {
     // 在集群模式下任何一个节点可用就可以执行
     agent any
     // 定义一些环境信息
-    //environment {}
+    environment {
+        hello = "123456"
+        world = "1234555"
+    }
     // 定义流水线的加工流程
     stages {
         // 流水线的所有流程
@@ -16,6 +19,7 @@ pipeline {
             steps {
                 // sh 'mvn clean package'
                 echo "编译打包代码"
+                echo ${hello}
             }
         }
 
@@ -23,6 +27,7 @@ pipeline {
             steps {
                 // sh 'mvn test'
                 echo "执行测试流程"
+                echo  ${world}
             }
         }
 
