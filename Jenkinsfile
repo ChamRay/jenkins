@@ -19,7 +19,7 @@ pipeline {
             steps {
                 // sh 'mvn clean package'
                 echo "编译打包代码"
-                echo ”$hello“
+                echo "$hello"
             }
         }
 
