@@ -7,9 +7,7 @@ pipeline {
     // 在集群模式下任何一个节点可用就可以执行
     agent any
     // 定义一些环境信息
-    environment {
-
-    }
+    //environment {}
     // 定义流水线的加工流程
     stages {
         // 流水线的所有流程
